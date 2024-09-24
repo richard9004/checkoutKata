@@ -133,7 +133,7 @@ if ($product['promotion_type'] === 'multiprice') {
 
 
 
-        <button class="btn btn-sm btn-success mt-3" onclick="scanProduct(<?php echo $product['id']; ?>">Scan Product</button>
+        <button class="btn btn-sm btn-success mt-3" onclick="scanProduct(<?php echo $product['id']; ?>)">Scan Product</button>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@ if ($product['promotion_type'] === 'multiprice') {
 function scanProduct(productId) {
     $.ajax({
         type: 'POST',
-        url: 'add_to_cart.php', =
+        url: 'add_to_cart.php', 
         data: { id: productId },
         dataType: 'json', 
         success: function(response) {
@@ -156,7 +156,6 @@ function scanProduct(productId) {
                 alert(response.error); 
             } else {
                 alert(response.message); 
-               =
                 $('#cartCount').text(response.totalItems);
             }
         }

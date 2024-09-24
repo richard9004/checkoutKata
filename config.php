@@ -1,7 +1,7 @@
 <?php
-$host = '';      
-$dbname = '';   
-$username = '';       
+$host = 'localhost';      
+$dbname = 'checkoutkata';   
+$username = 'root';       
 $password = '';   
 
 try {

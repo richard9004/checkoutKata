@@ -134,7 +134,7 @@ if ($promotionType === 'multiprice') {
 } elseif ($promotionType === 'buy_get_free') {
     $promotionTypeReadable = 'Buy Get Free';
 } elseif ($promotionType === 'meal_deal') {
-    $promotionTypeReadable = 'Meal Deal';
+    $promotionTypeReadable = 'Meal Deal'.' ('.$row['meal_deal_combination'].')';
 } else {
     $promotionTypeReadable = 'No Promotion'; 
 }
