@@ -57,7 +57,14 @@ try {
     </div>
     <h2 class="text-center mb-4">Product List</h2>
     <div class="row">
+    <?php if (empty($productsWithPromotions)): ?>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <p class="text-center">No products in the store.</p>
+    </div>
+<?php endif; ?>
         <?php 
+
+        
        
 function formatDateListing($date) {
     return date('jS F Y', strtotime($date)); 
